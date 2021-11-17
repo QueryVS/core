@@ -71,6 +71,10 @@ class OneController extends Controller
         ]);
     }
 
+    public function new_dashboard() {
+        return view('server.new_dashboard');
+    }
+
     public function remove()
     {
         hook('server_delete', [

@@ -50,6 +50,10 @@ Route::group(['middleware' => ['server']], function () {
         'server_one'
     );
 
+    Route::get('/new_dashboard/{server_id}', 'Server\OneController@new_dashboard')->name(
+        'new_dashboard'
+    );
+
     // Server' Service Status Route
     Route::post('/sunucu/kontrol', 'Server\OneController@serviceCheck')->name(
         'server_check'
